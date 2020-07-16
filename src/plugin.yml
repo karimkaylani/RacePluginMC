@@ -1,0 +1,9 @@
+main: me.KarimKaylani.Race.Main
+name: Race
+version: 1.0
+author: Karim Kaylani
+
+commands:
+   Race:
+      usage: /race [prep time in seconds] (defaults to 3min)
+      description: Starts race 
