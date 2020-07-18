@@ -34,4 +34,4 @@
 >Neither the beacon nor the iron blocks under it can be destroyed during the game. They will disappear upon the end of the round
 
 ## License
-This workflow is released under the [MIT license](http://opensource.org/licenses/mit-license.php)
+This plugin is released under the [MIT license](http://opensource.org/licenses/mit-license.php)
