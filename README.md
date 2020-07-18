@@ -25,9 +25,9 @@
 > Download the Race.jar file and drag it into your plugins folder on your Spigot server
 
 ## Usage:
-### <code>/race</code> --> Starts game with 3 minute prep phase
+### <code>/race</code> > Starts game with 3 minute prep phase
 
-### <code>race [prep phase time in seconds]</code> --> Use for custom timed prep phase
+### <code>race [prep phase time in seconds]</code> > Use for custom timed prep phase
 
 
 ### Note: 
