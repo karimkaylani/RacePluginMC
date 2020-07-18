@@ -1,6 +1,8 @@
 # Welcome to Race!
 
 > Suit up and get ready for an intense battle and race to get to the beacon first!
+
+### WARNING: DO NOT USE ON IMPORTANT WORLD WITHOUT BACKUP. THIS PLUGIN WILL REPLACE AND DESTROY SOME BLOCKS
 ---
 ### This game mode contains multiple phases:
 

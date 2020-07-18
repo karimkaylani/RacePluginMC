@@ -103,6 +103,21 @@ public class Play implements CommandExecutor {
 					
 				}
 				
+				 //generate blacksmith chest for each player on server
+			    for (int i = 1; i <= Bukkit.getOnlinePlayers().size(); i++) {
+			    	
+				    int chestX = generateRandomInt(plugin.spawnX-100, plugin.spawnX+100);
+					int chestZ = generateRandomInt(plugin.spawnZ-100,plugin.spawnZ+100);
+					int chestY = plugin.world.getHighestBlockAt(chestX, chestZ).getY() + 1;
+									
+					plugin.world.getBlockAt(chestX, chestY, chestZ).setType(Material.CHEST);
+					
+					Chest chest = (Chest) plugin.world.getBlockAt(chestX, chestY, chestZ).getState();
+					chest.setLootTable(Bukkit.getLootTable(LootTables.VILLAGE_WEAPONSMITH.getKey()));
+					chest.update();
+					
+			    }
+				
 				//teleport all players and set spawn point
 				for (Player p : Bukkit.getOnlinePlayers() ) {
 					p.teleport(plugin.spawnLoc);
@@ -133,12 +148,11 @@ public class Play implements CommandExecutor {
 					
 				}.runTaskTimer(plugin, 0, 20);
 				
-				
 				return true;
 			}
-	
-			return false;
-		}
+			
+		return false;	
+	}
 		
 		//generate random, inclusive int
 		public static int generateRandomInt(int min, int max) {
@@ -173,20 +187,6 @@ public class Play implements CommandExecutor {
 		        for (int zPoint = z-1 ; zPoint <= z+1; zPoint++) {            
 		            plugin.world.getBlockAt(xPoint, y-1, zPoint).setType(Material.IRON_BLOCK);
 		        }
-		    }
-		    
-		    //generate blacksmith chest for each player on server
-		    for (int i = 1; i <= Bukkit.getOnlinePlayers().size(); i++) {
-		    	
-			    int chestX = generateRandomInt(plugin.spawnX-100, plugin.spawnX+100);
-				int chestZ = generateRandomInt(plugin.spawnZ-100,plugin.spawnZ+100);
-				int chestY = plugin.world.getHighestBlockAt(chestX, chestZ).getY() + 2;
-								
-				plugin.world.getBlockAt(chestX, chestY, chestZ).setType(Material.CHEST);
-				
-				Chest chest = (Chest) plugin.world.getBlockAt(chestX, chestY, chestZ).getState();
-				chest.setLootTable(Bukkit.getLootTable(LootTables.VILLAGE_WEAPONSMITH.getKey()));
-				chest.update();
 		    	
 		    }
 		    
